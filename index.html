@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Order</title>
+
+  <!-- Simple CSS Styling -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .form-container {
+      width: 300px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    select,
+    input[type="radio"],
+    button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      font-size: 16px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    .result {
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Pizza Order System</h1>
+
+  <div class="form-container">
+    <form id="pizza-form">
+      <label for="size">Select Pizza Size:</label>
+      <input type="radio" id="large" name="size" value="large" required> Large ($6.00)<br>
+      <input type="radio" id="extra-large" name="size" value="extra_large" required> Extra Large ($10.00)<br>
+
+      <label for="toppings">Select Number of Toppings:</label>
+      <select id="toppings" required>
+        <option value="1">1 Topping ($1.00)</option>
+        <option value="2">2 Toppings ($1.75)</option>
+        <option value="3">3 Toppings ($2.50)</option>
+        <option value="4">4 Toppings ($3.35)</option>
+      </select>
+
+      <button type="submit">Calculate Total</button>
+    </form>
+  </div>
+
+  <div class="result" id="result">
+    <!-- Result will be displayed here -->
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
